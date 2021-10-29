@@ -53,7 +53,7 @@ def generate_launch_description():
     with open(params_file, 'r') as f:
         params = yaml.safe_load(f)['kobuki_safety_controller_node']['ros__parameters']
     safety_controller_node = launch_ros.actions.Node(package='kobuki_safety_controller',
-                                                     node_executable='kobuki_safety_controller_node',
+                                                     executable='kobuki_safety_controller_node',
                                                      output='both',
                                                      parameters=[params])
 
